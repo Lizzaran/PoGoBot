@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoGoBot.Console", "PoGoBot.Console\PoGoBot.Console.csproj", "{DC7E7A3A-746C-4C52-86E7-92DF4D82C000}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B9464831-D620-45B1-9BD5-6A58887F8FFC} = {B9464831-D620-45B1-9BD5-6A58887F8FFC}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub", "GitHub", "{F7921377-DD9F-4151-AF0C-7897A60E390E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POGOLib", "POGOLib\POGOLib.csproj", "{3BA89DFB-A162-420A-9DED-DAA211E52AD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoGoBot.Logic", "PoGoBot.Logic\PoGoBot.Logic.csproj", "{B9464831-D620-45B1-9BD5-6A58887F8FFC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3BA89DFB-A162-420A-9DED-DAA211E52AD2} = {3BA89DFB-A162-420A-9DED-DAA211E52AD2}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC7E7A3A-746C-4C52-86E7-92DF4D82C000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7E7A3A-746C-4C52-86E7-92DF4D82C000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC7E7A3A-746C-4C52-86E7-92DF4D82C000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC7E7A3A-746C-4C52-86E7-92DF4D82C000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BA89DFB-A162-420A-9DED-DAA211E52AD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BA89DFB-A162-420A-9DED-DAA211E52AD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BA89DFB-A162-420A-9DED-DAA211E52AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BA89DFB-A162-420A-9DED-DAA211E52AD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9464831-D620-45B1-9BD5-6A58887F8FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9464831-D620-45B1-9BD5-6A58887F8FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9464831-D620-45B1-9BD5-6A58887F8FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9464831-D620-45B1-9BD5-6A58887F8FFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

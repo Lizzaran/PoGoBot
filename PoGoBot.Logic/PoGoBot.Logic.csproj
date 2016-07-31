@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9464831-D620-45B1-9BD5-6A58887F8FFC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PoGoBot.Logic</RootNamespace>
+    <AssemblyName>PoGoBot.Logic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GeoCoordinatePortable, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GeoCoordinate.1.1.0\lib\portable-net45+wp80+win+wpa81\GeoCoordinatePortable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.0.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.0.0-beta4\lib\net45\Google.Protobuf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="POGOProtos, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\POGOProtos.1.4.0\lib\net45\POGOProtos.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts.cs" />
+    <Compile Include="Automation\BaseBot.cs" />
+    <Compile Include="Automation\Bot.cs" />
+    <Compile Include="Automation\Events\Tasks\Fort\PokeStopEventArgs.cs" />
+    <Compile Include="Automation\Events\Tasks\Item\ReceiveEventArgs.cs" />
+    <Compile Include="Automation\Events\Tasks\Item\RecycleEventArgs.cs" />
+    <Compile Include="Automation\Events\Tasks\Item\UseEventArgs.cs" />
+    <Compile Include="Automation\Events\Tasks\Player\CandyEventArgs.cs" />
+    <Compile Include="Automation\Events\Tasks\Player\ExperienceEventArgs.cs" />
+    <Compile Include="Automation\Events\Tasks\Player\SoftbanDetectedEventArgs.cs" />
+    <Compile Include="Automation\Events\Tasks\Player\SoftbanLiftedEventArgs.cs" />
+    <Compile Include="Automation\Events\Tasks\Player\StardustEventArgs.cs" />
+    <Compile Include="Automation\Events\Tasks\Pokemon\CatchEventArgs.cs" />
+    <Compile Include="Automation\Events\Tasks\Pokemon\EncounterEventArgs.cs" />
+    <Compile Include="Automation\Events\Tasks\Pokemon\EvolveEventArgs.cs" />
+    <Compile Include="Automation\Events\Tasks\Pokemon\ReleaseEventArgs.cs" />
+    <Compile Include="Automation\Filters\BaseFilter.cs" />
+    <Compile Include="Automation\Filters\Fort\PokeStopCooldownFilter.cs" />
+    <Compile Include="Automation\Filters\Fort\PokeStopDistanceFilter.cs" />
+    <Compile Include="Automation\Filters\Fort\PokeStopIsValidFilter.cs" />
+    <Compile Include="Automation\Filters\Item\RecycleWhitelistFilter.cs" />
+    <Compile Include="Automation\Filters\Pokemon\DeployedFilter.cs" />
+    <Compile Include="Automation\Filters\Pokemon\EncounterLureBlacklistFilter.cs" />
+    <Compile Include="Automation\Filters\Pokemon\EncounterLureExpireFilter.cs" />
+    <Compile Include="Automation\Filters\Pokemon\EncounterLureIsValidFilter.cs" />
+    <Compile Include="Automation\Filters\Pokemon\EncounterMapBlacklistFilter.cs" />
+    <Compile Include="Automation\Filters\Pokemon\EncounterMapExpireFilter.cs" />
+    <Compile Include="Automation\Filters\Pokemon\EncounterMapIsValidFilter.cs" />
+    <Compile Include="Automation\Filters\Pokemon\EvolveCandyFilter.cs" />
+    <Compile Include="Automation\Filters\Pokemon\EvolveCombatPowerFilter.cs" />
+    <Compile Include="Automation\Filters\Pokemon\FavoriteFilter.cs" />
+    <Compile Include="Automation\Filters\Pokemon\ReleaseCombatPowerFilter.cs" />
+    <Compile Include="Automation\Filters\Pokemon\ReleaseEvolveAwareFilter.cs" />
+    <Compile Include="Automation\Filters\Pokemon\ReleaseUniqueFilter.cs" />
+    <Compile Include="Automation\Tasks\BaseTask.cs" />
+    <Compile Include="Automation\Events\Tasks\EventDispatcher.cs" />
+    <Compile Include="Automation\Tasks\Item\RecycleTask.cs" />
+    <Compile Include="Automation\Tasks\Fort\PokeStopTask.cs" />
+    <Compile Include="Automation\Tasks\Player\SoftbanTask.cs" />
+    <Compile Include="Automation\Tasks\Pokemon\CatchTask.cs" />
+    <Compile Include="Automation\Tasks\Pokemon\BaseEncounterTask.cs" />
+    <Compile Include="Automation\Tasks\Pokemon\Encounter\IncenseTask.cs" />
+    <Compile Include="Automation\Tasks\Pokemon\Encounter\LureTask.cs" />
+    <Compile Include="Automation\Tasks\Pokemon\Encounter\MapTask.cs" />
+    <Compile Include="Automation\Tasks\Pokemon\EvolveTask.cs" />
+    <Compile Include="Automation\Tasks\Pokemon\ReleaseTask.cs" />
+    <Compile Include="Automation\Tasks\Context.cs" />
+    <Compile Include="Automation\Tasks\Traits.cs" />
+    <Compile Include="Enumerations\EEncounterResult.cs" />
+    <Compile Include="Enumerations\EEncounterType.cs" />
+    <Compile Include="Extensions\ArrayExtensions.cs" />
+    <Compile Include="Extensions\GeoCoordinateExtensions.cs" />
+    <Compile Include="Extensions\InventoryExtensions.cs" />
+    <Compile Include="Helpers\Pipeline.cs" />
+    <Compile Include="Helpers\Utils.cs" />
+    <Compile Include="Interfaces\IAutomationTask.cs" />
+    <Compile Include="Interfaces\IFilter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Api\BaseCategory.cs" />
+    <Compile Include="Api\Categories\Download.cs" />
+    <Compile Include="Api\Categories\Fort.cs" />
+    <Compile Include="Api\Categories\Item.cs" />
+    <Compile Include="Api\Categories\Player.cs" />
+    <Compile Include="Api\Categories\Pokemon.cs" />
+    <Compile Include="Api\RpcRequest.cs" />
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+    <EmbeddedResource Include="Resources\settings.json" />
+    <EmbeddedResource Include="Resources\accounts.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\POGOLib\POGOLib.csproj">
+      <Project>{3BA89DFB-A162-420A-9DED-DAA211E52AD2}</Project>
+      <Name>POGOLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

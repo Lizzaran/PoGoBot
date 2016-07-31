@@ -1,0 +1,22 @@
+﻿{
+  "Accounts": [
+    {
+      "Provider": "PokemonTrainerClub",
+      "Username": "xxx",
+      "Password": "xxx",
+      "Position": {
+        "Latitude": 0.0,
+        "Longitude": 0.0
+      }
+    },
+    {
+      "Provider": "GoogleAuth",
+      "Username": "xxx",
+      "Password": "xxx",
+      "Position": {
+        "Latitude": 0.0,
+        "Longitude": 0.0
+      }
+    }
+  ]
+}
