@@ -1,0 +1,20 @@
+﻿# Auto detect text files and perform LF normalization
+* text=auto
+
+# Custom for Visual Studio
+*.sln			text eol=crlf
+*.csproj		text eol=crlf
+*.gitattributes text
+.gitignore		text
+*.md			text
+
+# Visual Studio
+*.cs diff=csharp
+*.sln       merge=binary
+*.csproj	merge=binary
+
+# Images
+*.jpg   binary
+*.jpeg  binary
+*.png   binary
+*.gif   binary
