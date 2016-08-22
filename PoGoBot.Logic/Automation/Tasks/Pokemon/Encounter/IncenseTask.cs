@@ -31,7 +31,7 @@ namespace PoGoBot.Logic.Automation.Tasks.Pokemon.Encounter
             {
                 return;
             }
-            var encounterResponse = Context.RpcRequest.Pokemon.EncounterIncense((long) incenseResponse.EncounterId,
+            var encounterResponse = Context.RpcRequest.Pokemon.EncounterIncense(incenseResponse.EncounterId,
                 incenseResponse.EncounterLocation);
             var captureProbability = (encounterResponse.CaptureProbability?.CaptureProbability_?.FirstOrDefault() ?? 0.3)*
                                      100;
