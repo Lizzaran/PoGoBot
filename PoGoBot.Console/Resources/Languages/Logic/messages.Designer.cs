@@ -187,7 +187,7 @@ namespace PoGoBot.Console.Resources.Languages.Logic {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} (CP {1}).
+        ///   Looks up a localized string similar to {0} (CP {1}) (XP {2}) (IA {3}) (ID {4}) (IS {5}).
         /// </summary>
         internal static string Task_Pokemon_Release_Message {
             get {

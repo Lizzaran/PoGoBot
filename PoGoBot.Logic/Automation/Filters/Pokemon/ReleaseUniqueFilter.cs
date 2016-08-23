@@ -20,8 +20,7 @@ namespace PoGoBot.Logic.Automation.Filters.Pokemon
                 return input;
             }
             var pokemons = new List<PokemonData>();
-            var groups = input.OrderBy(p => p.Cp).ThenBy(n => n.StaminaMax).GroupBy(p => p.PokemonId);
-            foreach (var group in groups)
+            foreach (var group in input.GroupBy(p => p.PokemonId))
             {
                 pokemons.AddRange(group.Skip(Math.Max(0, Settings.Bot.Pokemon.Release.KeepUniqueAmount)));
             }

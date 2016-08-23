@@ -81,8 +81,8 @@
         "Enabled": true,
         "IsEvolveAware": true,
         "IgnoreFavorites": true,
-        "PrioritizeLowCombatPower": true,
-        "KeepUniqueAmount": 1,
+        "PriorityType": "LowIndividualValues",
+        "KeepUniqueAmount": 6,
         "MaximumCombatPower": 500
       },
       "Evolve": {

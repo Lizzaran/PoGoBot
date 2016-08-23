@@ -4,6 +4,7 @@ using Newtonsoft.Json.Converters;
 using PoGoBot.Logic.Helpers;
 using POGOProtos.Enums;
 using POGOProtos.Inventory.Item;
+using PoGoBot.Logic.Enumerations;
 
 namespace PoGoBot.Logic
 {
@@ -79,7 +80,8 @@ namespace PoGoBot.Logic
             public bool Enabled { get; set; }
             public bool IsEvolveAware { get; set; }
             public bool IgnoreFavorites { get; set; }
-            public bool PrioritizeLowCombatPower { get; set; }
+            [JsonConverter(typeof(StringEnumConverter))]
+            public EReleasePriorityType PriorityType { get; set; }
             public int KeepUniqueAmount { get; set; }
             public int MaximumCombatPower { get; set; }
         }

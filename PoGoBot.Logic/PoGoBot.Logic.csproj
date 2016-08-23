@@ -103,7 +103,7 @@
     <Compile Include="Automation\Filters\Pokemon\EvolveCandyFilter.cs" />
     <Compile Include="Automation\Filters\Pokemon\EvolveCombatPowerFilter.cs" />
     <Compile Include="Automation\Filters\Pokemon\FavoriteFilter.cs" />
-    <Compile Include="Automation\Filters\Pokemon\ReleaseCombatPowerFilter.cs" />
+    <Compile Include="Automation\Filters\Pokemon\ReleasePriorityTypeFilter.cs" />
     <Compile Include="Automation\Filters\Pokemon\ReleaseEvolveAwareFilter.cs" />
     <Compile Include="Automation\Filters\Pokemon\ReleaseUniqueFilter.cs" />
     <Compile Include="Automation\Tasks\BaseTask.cs" />
@@ -120,6 +120,7 @@
     <Compile Include="Automation\Tasks\Pokemon\ReleaseTask.cs" />
     <Compile Include="Automation\Tasks\Context.cs" />
     <Compile Include="Automation\Tasks\Traits.cs" />
+    <Compile Include="Enumerations\EReleasePriorityType.cs" />
     <Compile Include="Enumerations\EEncounterResult.cs" />
     <Compile Include="Enumerations\EEncounterType.cs" />
     <Compile Include="Extensions\ArrayExtensions.cs" />

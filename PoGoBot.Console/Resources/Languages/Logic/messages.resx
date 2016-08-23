@@ -154,7 +154,7 @@
     <value>Transfer</value>
   </data>
   <data name="Task_Pokemon_Release_Message" xml:space="preserve">
-    <value>{0} (CP {1})</value>
+    <value>{0} (CP {1}) (XP {2}) (IA {3}) (ID {4}) (IS {5})</value>
   </data>
   <data name="Task_Pokemon_Catch_Identifier" xml:space="preserve">
     <value>Pokemon</value>

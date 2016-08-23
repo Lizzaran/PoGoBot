@@ -133,7 +133,8 @@ namespace PoGoBot.Console
                 return;
             }
             EnqueueMessage("Task_Pokemon_Release_Identifier", "Task_Pokemon_Release_Message", Color.PaleVioletRed,
-                args.Pokemon.PokemonId.ToString(), args.Pokemon.Cp);
+                args.Pokemon.PokemonId.ToString(), args.Pokemon.Cp, args.Pokemon.Stamina, 
+                args.Pokemon.IndividualAttack, args.Pokemon.IndividualDefense, args.Pokemon.IndividualStamina);
         }
 
         private void HandleEvent(CatchEventArgs args)
