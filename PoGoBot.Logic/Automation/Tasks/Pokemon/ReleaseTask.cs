@@ -26,7 +26,9 @@ namespace PoGoBot.Logic.Automation.Tasks.Pokemon
                 new ReleaseUniqueFilter(Context.Settings, Context.Session,
                     () => Context.Settings.Bot.Pokemon.Release.KeepUniqueAmount > 0),
                 new ReleaseEvolveAwareFilter(Context.Settings, Context.Session,
-                    () => Context.Settings.Bot.Pokemon.Release.IsEvolveAware)
+                    () => Context.Settings.Bot.Pokemon.Release.IsEvolveAware),
+                new ReleaseMaxIndividualValuesFilter(Context.Settings, Context.Session,
+                    () => Context.Settings.Bot.Pokemon.Release.MaximumIndividualValues > 0)
             });
         }
 

@@ -83,7 +83,7 @@
         "IgnoreFavorites": true,
         "PriorityType": "LowIndividualValues",
         "KeepUniqueAmount": 6,
-        "MaximumCombatPower": 500
+        "MaximumIndividualValues": 40
       },
       "Evolve": {
         "Enabled": true,

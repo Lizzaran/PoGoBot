@@ -83,7 +83,7 @@ namespace PoGoBot.Logic
             [JsonConverter(typeof(StringEnumConverter))]
             public EReleasePriorityType PriorityType { get; set; }
             public int KeepUniqueAmount { get; set; }
-            public int MaximumCombatPower { get; set; }
+            public int MaximumIndividualValues { get; set; }
         }
 
         [JsonObject(ItemRequired = Required.Always)]

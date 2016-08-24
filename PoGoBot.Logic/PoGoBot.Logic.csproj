@@ -103,6 +103,7 @@
     <Compile Include="Automation\Filters\Pokemon\EvolveCandyFilter.cs" />
     <Compile Include="Automation\Filters\Pokemon\EvolveCombatPowerFilter.cs" />
     <Compile Include="Automation\Filters\Pokemon\FavoriteFilter.cs" />
+    <Compile Include="Automation\Filters\Pokemon\ReleaseMaxIndividualValuesFilter.cs" />
     <Compile Include="Automation\Filters\Pokemon\ReleasePriorityTypeFilter.cs" />
     <Compile Include="Automation\Filters\Pokemon\ReleaseEvolveAwareFilter.cs" />
     <Compile Include="Automation\Filters\Pokemon\ReleaseUniqueFilter.cs" />
