@@ -82,5 +82,11 @@ namespace PoGoBot.Logic.Helpers
             }
             return data;
         }
+
+        public static double RandomizeCoordinate(double coordinate)
+        {
+            Random rnd = new Random();
+            return coordinate + (rnd.Next(100) - 50.0) / 1000000;
+        }
     }
 }

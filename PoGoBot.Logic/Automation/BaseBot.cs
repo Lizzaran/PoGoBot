@@ -6,6 +6,7 @@ using POGOLib.Net;
 using POGOLib.Net.Authentication;
 using POGOLib.Net.Authentication.Data;
 using POGOLib.Pokemon.Data;
+using PoGoBot.Logic.Helpers;
 
 namespace PoGoBot.Logic.Automation
 {
@@ -43,8 +44,8 @@ namespace PoGoBot.Logic.Automation
                 Account.Username,
                 Account.Password,
                 Account.Provider,
-                Account.Position.Latitude,
-                Account.Position.Longitude
+                Utils.RandomizeCoordinate(Account.Position.Latitude),
+                Utils.RandomizeCoordinate(Account.Position.Longitude)
                 );
             Session.AccessTokenUpdated += OnSessionAccessTokenUpdated;
             Authenticated?.Invoke(this, EventArgs.Empty);
