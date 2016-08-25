@@ -115,6 +115,24 @@ namespace PoGoBot.Console.Resources.Languages.Logic {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to LevelUp Rewards.
+        /// </summary>
+        internal static string Task_Player_LevelUpRewards_Identifier {
+            get {
+                return ResourceManager.GetString("Task_Player_LevelUpRewards_Identifier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Level {0} | {1}.
+        /// </summary>
+        internal static string Task_Player_LevelUpRewards_Message_Detected {
+            get {
+                return ResourceManager.GetString("Task_Player_LevelUpRewards_Message_Detected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Softban.
         /// </summary>
         internal static string Task_Player_Softban_Identifier {

@@ -143,5 +143,18 @@ namespace PoGoBot.Console
                 args.Response.Status, args.Pokemon.PokemonId.ToString(), args.Pokemon.Cp,
                 args.CaptureProbability.ToString("0"));
         }
+
+        private void HandleEvent(LevelUpRewardsEventArgs args)
+        {
+            var items = string.Empty;
+            if (args.Response.ItemsAwarded.Any())
+            {
+                var dictionary = args.Response.ItemsAwarded.GroupBy(i => i.ItemId)
+                    .ToDictionary(k => k.Key, v => v.Sum(x => x.ItemCount));
+                items = string.Join(", ", dictionary.Select(kv => kv.Value + " x " + kv.Key).ToArray());
+            }
+            EnqueueMessage("Task_Player_LevelUpRewards_Identifier", "Task_Player_LevelUpRewards_Message_Detected", Color.White,
+                args.Level, items);
+        }
     }
 }

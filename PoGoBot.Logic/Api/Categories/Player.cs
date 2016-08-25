@@ -45,5 +45,23 @@ namespace PoGoBot.Logic.Api.Categories
             });
             return PlayerUpdateResponse.Parser.ParseFrom(response);
         }
+
+        public LevelUpRewardsResponse LevelUpRewards(int level)
+        {
+            var response = Session.RpcClient.SendRemoteProcedureCall(new Request
+            {
+                RequestType = RequestType.LevelUpRewards,
+                RequestMessage = new LevelUpRewardsMessage
+                {
+                    Level = level
+                }.ToByteString()
+            });
+            var parsed = LevelUpRewardsResponse.Parser.ParseFrom(response);
+            if (parsed.Result != LevelUpRewardsResponse.Types.Result.Success)
+            {
+                Log.Error($"LevelUpRewards Success: {parsed.Result}");
+            }
+            return parsed;
+        }
     }
 }

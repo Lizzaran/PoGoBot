@@ -162,4 +162,10 @@
   <data name="Task_Pokemon_Catch_Message" xml:space="preserve">
     <value>{0} | {1} | CP {2} | Chance: {3}%</value>
   </data>
+  <data name="Task_Player_LevelUpRewards_Identifier" xml:space="preserve">
+    <value>LevelUp Rewards</value>
+  </data>
+  <data name="Task_Player_LevelUpRewards_Message_Detected" xml:space="preserve">
+    <value>Level {0} | {1}</value>
+  </data>
 </root>
