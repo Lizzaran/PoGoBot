@@ -156,5 +156,17 @@ namespace PoGoBot.Console
             EnqueueMessage("Task_Player_LevelUpRewards_Identifier", "Task_Player_LevelUpRewards_Message_Detected", Color.White,
                 args.Level, items);
         }
+
+        private void HandleEvent(PlayerUpdateEventArgs args)
+        {
+            EnqueueMessage("Task_Player_Update_Identifier", "Task_Player_Update_Message", Color.White,
+                args.Latitude, args.Longitude);
+        }
+
+        private void HandleEvent(RouteNextPointEventArgs args)
+        {
+            EnqueueMessage("Task_Route_Next_Point_Identifier", "Task_Route_Next_Point_Message", Color.Red,
+                args.NextPoint, args.Latitude, args.Longitude);
+        }
     }
 }

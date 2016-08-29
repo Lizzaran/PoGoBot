@@ -16,7 +16,7 @@ namespace PoGoBot.Logic.Automation.Filters.Pokemon
 
         public override IEnumerable<PokemonData> Process(IEnumerable<PokemonData> input)
         {
-            return input.Where(p => p.IndividualAttack + p.IndividualDefense + p.IndividualStamina < Settings.Bot.Pokemon.Release.MaximumIndividualValues);
+            return input.Where(p => p.IndividualAttack + p.IndividualDefense + p.IndividualStamina < Settings.Bot.Pokemon.Release.MaximumIndividualValues).ToList();
         }
     }
 }

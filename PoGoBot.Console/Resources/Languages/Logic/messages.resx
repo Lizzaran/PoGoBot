@@ -168,4 +168,16 @@
   <data name="Task_Player_LevelUpRewards_Message_Detected" xml:space="preserve">
     <value>Level {0} | {1}</value>
   </data>
+  <data name="Task_Player_Update_Identifier" xml:space="preserve">
+    <value>Player Update</value>
+  </data>
+  <data name="Task_Player_Update_Message" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="Task_Route_Next_Point_Identifier" xml:space="preserve">
+    <value>Route Next Point</value>
+  </data>
+  <data name="Task_Route_Next_Point_Message" xml:space="preserve">
+    <value>({0}) {1} {2}</value>
+  </data>
 </root>

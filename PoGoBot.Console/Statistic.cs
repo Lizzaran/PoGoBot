@@ -83,7 +83,7 @@ namespace PoGoBot.Console
                 var sdh = (int) (Stardust/runtime.TotalHours);
                 var ph = (int) (Pokemons/runtime.TotalHours);
                 var ih = (int) (Items/runtime.TotalHours);
-                _lastToString = $"EXP: {_bot.Session.Player.Stats.Experience} | LVL: {_bot.Session.Player.Stats.Level} | EXP/H: {exph} | SD/H: {sdh} | P/H: {ph} | I/H: {ih}";
+                _lastToString = $"EXP: {_bot.Session.Player.Stats.Experience} | LVL: {_bot.Session.Player.Stats.Level} | KM: {_bot.Session.Player.Stats.KmWalked} | PM: {_bot.Session.Player.Stats.PokemonsCaptured} | PS: {_bot.Session.Player.Stats.PokeStopVisits} | EXP/H: {exph} | SD/H: {sdh} | P/H: {ph} | I/H: {ih}";
             }
             return _lastToString;
         }

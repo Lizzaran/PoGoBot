@@ -5,6 +5,7 @@ using PoGoBot.Logic.Helpers;
 using POGOProtos.Enums;
 using POGOProtos.Inventory.Item;
 using PoGoBot.Logic.Enumerations;
+using GeoCoordinatePortable;
 
 namespace PoGoBot.Logic
 {
@@ -27,6 +28,7 @@ namespace PoGoBot.Logic
             public SettingItem Item { get; set; }
             public SettingPokemon Pokemon { get; set; }
             public SettingPokeStop PokeStop { get; set; }
+            public SettingsFollowRoute FollowRoute { get; set; }
         }
 
         [JsonObject(ItemRequired = Required.Always)]
@@ -65,7 +67,7 @@ namespace PoGoBot.Logic
         [JsonObject(ItemRequired = Required.Always)]
         public class SettingRecycleItem
         {
-            [JsonConverter(typeof (StringEnumConverter))]
+            [JsonConverter(typeof(StringEnumConverter))]
             public ItemId ItemId { get; set; }
 
             public int MaximumAmount { get; set; }
@@ -124,7 +126,7 @@ namespace PoGoBot.Logic
         [JsonObject(ItemRequired = Required.Always)]
         public class SettingCatchBerry
         {
-            [JsonConverter(typeof (StringEnumConverter))]
+            [JsonConverter(typeof(StringEnumConverter))]
             public ItemId ItemId { get; set; }
 
             public double MaximumCaptureProbability { get; set; }
@@ -133,7 +135,7 @@ namespace PoGoBot.Logic
         [JsonObject(ItemRequired = Required.Always)]
         public class SettingCatchBall
         {
-            [JsonConverter(typeof (StringEnumConverter))]
+            [JsonConverter(typeof(StringEnumConverter))]
             public ItemId ItemId { get; set; }
 
             public int MinimumCombatPower { get; set; }
@@ -142,7 +144,7 @@ namespace PoGoBot.Logic
         [JsonObject(ItemRequired = Required.Always)]
         public class SettingCatchIgnore
         {
-            [JsonConverter(typeof (StringEnumConverter))]
+            [JsonConverter(typeof(StringEnumConverter))]
             public PokemonId PokemonId { get; set; }
         }
 
@@ -151,6 +153,22 @@ namespace PoGoBot.Logic
         {
             public bool Enabled { get; set; }
             public long CooldownSeconds { get; set; }
+        }
+
+        [JsonObject(ItemRequired = Required.Always)]
+        public class SettingsFollowRoute
+        {
+            public bool Enabled { get; set; }
+            public int StepSize { get; set; }
+            public int Speed { get; set; }
+            public List<SettingsRoutePoint> RoutePoints { get; set; }
+        }
+
+        [JsonObject(ItemRequired = Required.Always)]
+        public class SettingsRoutePoint
+        {
+            public GeoCoordinate Position { get; set; }
+            public List<int> RouteLinks { get; set; }
         }
     }
 }

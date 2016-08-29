@@ -13,147 +13,182 @@
       "Enabled": true
     },
     "Item": {
-        "Recycle": {
+      "Recycle": {
+        "Enabled": true,
+        "Items": [
+          {
+            "ItemId": "ItemPokeBall",
+            "MaximumAmount": 50
+          },
+          {
+            "ItemId": "ItemGreatBall",
+            "MaximumAmount": 75
+          },
+          {
+            "ItemId": "ItemUltraBall",
+            "MaximumAmount": 999
+          },
+          {
+            "ItemId": "ItemMasterBall",
+            "MaximumAmount": 999
+          },
+          {
+            "ItemId": "ItemPotion",
+            "MaximumAmount": 5
+          },
+          {
+            "ItemId": "ItemSuperPotion",
+            "MaximumAmount": 10
+          },
+          {
+            "ItemId": "ItemHyperPotion",
+            "MaximumAmount": 15
+          },
+          {
+            "ItemId": "ItemMaxPotion",
+            "MaximumAmount": 20
+          },
+          {
+            "ItemId": "ItemRevive",
+            "MaximumAmount": 5
+          },
+          {
+            "ItemId": "ItemMaxRevive",
+            "MaximumAmount": 10
+          },
+          {
+            "ItemId": "ItemRazzBerry",
+            "MaximumAmount": 10
+          },
+          {
+            "ItemId": "ItemBlukBerry",
+            "MaximumAmount": 10
+          },
+          {
+            "ItemId": "ItemNanabBerry",
+            "MaximumAmount": 10
+          },
+          {
+            "ItemId": "ItemWeparBerry",
+            "MaximumAmount": 10
+          },
+          {
+            "ItemId": "ItemPinapBerry",
+            "MaximumAmount": 10
+          }
+        ]
+      }
+    },
+    "Pokemon": {
+      "Release": {
+        "Enabled": true,
+        "IsEvolveAware": true,
+        "IgnoreFavorites": true,
+        "PriorityType": "LowIndividualValues",
+        "KeepUniqueAmount": 6,
+        "MaximumIndividualValues": 40
+      },
+      "Evolve": {
+        "Enabled": true,
+        "IgnoreFavorites": false,
+        "PrioritizeLowCandy": true,
+        "MinimumCandyNeeded": 0,
+        "MaximumCandyNeeded": 999,
+        "MinimumCombatPower": 0,
+        "MaximumCombatPower": 9999
+      },
+      "Catch": {
+        "Enabled": true,
+        "MinimumBalls": 10,
+        "MaximumAttemps": 10,
+        "Berry": {
           "Enabled": true,
-          "Items": [
-            {
-              "ItemId": "ItemPokeBall",
-              "MaximumAmount": 50
-            },
-            {
-              "ItemId": "ItemGreatBall",
-              "MaximumAmount": 75
-            },
-            {
-              "ItemId": "ItemUltraBall",
-              "MaximumAmount": 999
-            },
-            {
-              "ItemId": "ItemMasterBall",
-              "MaximumAmount": 999
-            },
-            {
-              "ItemId": "ItemPotion",
-              "MaximumAmount": 5
-            },
-            {
-              "ItemId": "ItemSuperPotion",
-              "MaximumAmount": 10
-            },
-            {
-              "ItemId": "ItemHyperPotion",
-              "MaximumAmount": 15
-            },
-            {
-              "ItemId": "ItemMaxPotion",
-              "MaximumAmount": 20
-            },
-            {
-              "ItemId": "ItemRevive",
-              "MaximumAmount": 5
-            },
-            {
-              "ItemId": "ItemMaxRevive",
-              "MaximumAmount": 10
-            },
+          "Berries": [
             {
               "ItemId": "ItemRazzBerry",
-              "MaximumAmount": 10
+              "MaximumCaptureProbability": 50.0
             },
             {
               "ItemId": "ItemBlukBerry",
-              "MaximumAmount": 10
+              "MaximumCaptureProbability": 40.0
             },
             {
               "ItemId": "ItemNanabBerry",
-              "MaximumAmount": 10
+              "MaximumCaptureProbability": 30.0
             },
             {
               "ItemId": "ItemWeparBerry",
-              "MaximumAmount": 10
+              "MaximumCaptureProbability": 20.0
             },
             {
               "ItemId": "ItemPinapBerry",
-              "MaximumAmount": 10
+              "MaximumCaptureProbability": 10.0
             }
           ]
-        }
-      },
-      "Pokemon": {
-        "Release": {
-          "Enabled": true,
-          "IsEvolveAware": true,
-          "IgnoreFavorites": true,
-          "PriorityType": "LowIndividualValues",
-          "KeepUniqueAmount": 6,
-          "MaximumIndividualValues": 40
         },
-        "Evolve": {
-          "Enabled": true,
-          "IgnoreFavorites": false,
-          "PrioritizeLowCandy": true,
-          "MinimumCandyNeeded": 0,
-          "MaximumCandyNeeded": 999,
-          "MinimumCombatPower": 0,
-          "MaximumCombatPower": 9999
-        },
-        "Catch": {
-          "Enabled": true,
-          "MinimumBalls": 10,
-          "MaximumAttemps": 10,
-          "Berry": {
-            "Enabled": true,
-            "Berries": [
-              {
-                "ItemId": "ItemRazzBerry",
-                "MaximumCaptureProbability": 50.0
-              },
-              {
-                "ItemId": "ItemBlukBerry",
-                "MaximumCaptureProbability": 40.0
-              },
-              {
-                "ItemId": "ItemNanabBerry",
-                "MaximumCaptureProbability": 30.0
-              },
-              {
-                "ItemId": "ItemWeparBerry",
-                "MaximumCaptureProbability": 20.0
-              },
-              {
-                "ItemId": "ItemPinapBerry",
-                "MaximumCaptureProbability": 10.0
-              }
-            ]
+        "Balls": [
+          {
+            "ItemId": "ItemPokeBall",
+            "MinimumCombatPower": 0
           },
-          "Balls": [
-            {
-              "ItemId": "ItemPokeBall",
-              "MinimumCombatPower": 0
-            },
-            {
-              "ItemId": "ItemGreatBall",
-              "MinimumCombatPower": 300
-            },
-            {
-              "ItemId": "ItemUltraBall",
-              "MinimumCombatPower": 700
-            },
-            {
-              "ItemId": "ItemMasterBall",
-              "MinimumCombatPower": 1200
-            }
-          ],
-          "Ignores": [
-            {
-              "PokemonId": "Mewtwo"
-            }
+          {
+            "ItemId": "ItemGreatBall",
+            "MinimumCombatPower": 300
+          },
+          {
+            "ItemId": "ItemUltraBall",
+            "MinimumCombatPower": 700
+          },
+          {
+            "ItemId": "ItemMasterBall",
+            "MinimumCombatPower": 1200
+          }
+        ],
+        "Ignores": [
+          {
+            "PokemonId": "Mewtwo"
+          }
+        ]
+      }
+    },
+    "PokeStop": {
+      "Enabled": true,
+      "CooldownSeconds": 300.0
+    },
+    "FollowRoute": {
+      "Enabled": true,
+      "StepSize": 5,
+      "Speed": 5,
+      "RoutePoints": [
+        {
+          "Position": {
+            "Latitude": 48.890684, 
+            "Longitude": 2.240364
+          },
+          "RouteLinks": [
+            1
+          ]
+        },
+        {
+          "Position": {
+            "Latitude": 48.891947, 
+            "Longitude": 2.236314
+          },
+          "RouteLinks": [
+            0,
+            2
+          ]
+        },
+        {
+          "Position": {
+            "Latitude": 48.892430, 
+            "Longitude": 2.236765
+          },
+          "RouteLinks": [
+            1
           ]
         }
-      },
-      "PokeStop": {
-        "Enabled": true,
-        "CooldownSeconds": 300.0
-      }
+      ]
     }
+  }
 }

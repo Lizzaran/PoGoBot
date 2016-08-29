@@ -82,6 +82,8 @@
     <Compile Include="Automation\Events\Tasks\Player\CandyEventArgs.cs" />
     <Compile Include="Automation\Events\Tasks\Player\ExperienceEventArgs.cs" />
     <Compile Include="Automation\Events\Tasks\Player\LevelUpRewardsEventArgs.cs" />
+    <Compile Include="Automation\Events\Tasks\Player\PlayerUpdateEventArgs.cs" />
+    <Compile Include="Automation\Events\Tasks\Player\RouteNextPointEventArgs.cs" />
     <Compile Include="Automation\Events\Tasks\Player\SoftbanDetectedEventArgs.cs" />
     <Compile Include="Automation\Events\Tasks\Player\SoftbanLiftedEventArgs.cs" />
     <Compile Include="Automation\Events\Tasks\Player\StardustEventArgs.cs" />
@@ -112,6 +114,7 @@
     <Compile Include="Automation\Events\Tasks\EventDispatcher.cs" />
     <Compile Include="Automation\Tasks\Item\RecycleTask.cs" />
     <Compile Include="Automation\Tasks\Fort\PokeStopTask.cs" />
+    <Compile Include="Automation\Tasks\Player\FollowRouteTask.cs" />
     <Compile Include="Automation\Tasks\Player\LevelUpRewardsTask.cs" />
     <Compile Include="Automation\Tasks\Player\SoftbanTask.cs" />
     <Compile Include="Automation\Tasks\Pokemon\CatchTask.cs" />

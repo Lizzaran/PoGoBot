@@ -160,6 +160,24 @@ namespace PoGoBot.Console.Resources.Languages.Logic {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Player Update.
+        /// </summary>
+        internal static string Task_Player_Update_Identifier {
+            get {
+                return ResourceManager.GetString("Task_Player_Update_Identifier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} {1}.
+        /// </summary>
+        internal static string Task_Player_Update_Message {
+            get {
+                return ResourceManager.GetString("Task_Player_Update_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pokemon.
         /// </summary>
         internal static string Task_Pokemon_Catch_Identifier {
@@ -210,6 +228,24 @@ namespace PoGoBot.Console.Resources.Languages.Logic {
         internal static string Task_Pokemon_Release_Message {
             get {
                 return ResourceManager.GetString("Task_Pokemon_Release_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Route Next Point.
+        /// </summary>
+        internal static string Task_Route_Next_Point_Identifier {
+            get {
+                return ResourceManager.GetString("Task_Route_Next_Point_Identifier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ({0}) {1} {2}.
+        /// </summary>
+        internal static string Task_Route_Next_Point_Message {
+            get {
+                return ResourceManager.GetString("Task_Route_Next_Point_Message", resourceCulture);
             }
         }
     }
