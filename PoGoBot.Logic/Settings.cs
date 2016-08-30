@@ -24,6 +24,7 @@ namespace PoGoBot.Logic
         {
             public int IntervalMilliseconds { get; set; }
             public SettingsSoftban Softban { get; set; }
+            public SettingsEggIncubator EggIncubator { get; set; }
             public SettingsLevelUpRewards LevelUpRewards { get; set; }
             public SettingItem Item { get; set; }
             public SettingPokemon Pokemon { get; set; }
@@ -37,6 +38,11 @@ namespace PoGoBot.Logic
             public bool Enabled { get; set; }
             public int SpinAmount { get; set; }
             public SettingsSoftbanTrigger Trigger { get; set; }
+        }
+
+        public class SettingsEggIncubator
+        {
+            public bool Enabled { get; set; }
         }
 
         public class SettingsLevelUpRewards

@@ -79,6 +79,7 @@
     <Compile Include="Automation\Events\Tasks\Item\ReceiveEventArgs.cs" />
     <Compile Include="Automation\Events\Tasks\Item\RecycleEventArgs.cs" />
     <Compile Include="Automation\Events\Tasks\Item\UseEventArgs.cs" />
+    <Compile Include="Automation\Events\Tasks\Item\UseItemEggIncubatorArgs.cs" />
     <Compile Include="Automation\Events\Tasks\Player\CandyEventArgs.cs" />
     <Compile Include="Automation\Events\Tasks\Player\ExperienceEventArgs.cs" />
     <Compile Include="Automation\Events\Tasks\Player\LevelUpRewardsEventArgs.cs" />
@@ -112,6 +113,7 @@
     <Compile Include="Automation\Filters\Pokemon\ReleaseUniqueFilter.cs" />
     <Compile Include="Automation\Tasks\BaseTask.cs" />
     <Compile Include="Automation\Events\Tasks\EventDispatcher.cs" />
+    <Compile Include="Automation\Tasks\Item\EggIncubatorTask.cs" />
     <Compile Include="Automation\Tasks\Item\RecycleTask.cs" />
     <Compile Include="Automation\Tasks\Fort\PokeStopTask.cs" />
     <Compile Include="Automation\Tasks\Player\FollowRouteTask.cs" />

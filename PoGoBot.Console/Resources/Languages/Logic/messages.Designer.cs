@@ -248,5 +248,23 @@ namespace PoGoBot.Console.Resources.Languages.Logic {
                 return ResourceManager.GetString("Task_Route_Next_Point_Message", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use Egg Incubator.
+        /// </summary>
+        internal static string Task_Use_Item_Egg_Incubator_Identifier {
+            get {
+                return ResourceManager.GetString("Task_Use_Item_Egg_Incubator_Identifier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ({0}) {1} {2}.
+        /// </summary>
+        internal static string Task_Use_Item_Egg_Incubator_Message {
+            get {
+                return ResourceManager.GetString("Task_Use_Item_Egg_Incubator_Message", resourceCulture);
+            }
+        }
     }
 }

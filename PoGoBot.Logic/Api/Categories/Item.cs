@@ -55,5 +55,24 @@ namespace PoGoBot.Logic.Api.Categories
             }
             return parsed;
         }
+
+        public UseItemEggIncubatorResponse UseEggIncubator(string itemId, ulong pokemonId)
+        {
+            var response = Session.RpcClient.SendRemoteProcedureCall(new Request
+            {
+                RequestType = RequestType.UseItemEggIncubator,
+                RequestMessage = new UseItemEggIncubatorMessage
+                {
+                    ItemId = itemId,
+                    PokemonId = pokemonId                    
+                }.ToByteString()
+            });
+            var parsed = UseItemEggIncubatorResponse.Parser.ParseFrom(response);
+            if (parsed.Result != UseItemEggIncubatorResponse.Types.Result.Success)
+            {
+                Log.Error($"UseItemEggIncubator Result: {parsed.Result}");
+            }
+            return parsed;
+        }
     }
 }

@@ -168,5 +168,11 @@ namespace PoGoBot.Console
             EnqueueMessage("Task_Route_Next_Point_Identifier", "Task_Route_Next_Point_Message", Color.Red,
                 args.NextPoint, args.Latitude, args.Longitude);
         }
+
+        private void HandleEvent(UseItemEggIncubatorArgs args)
+        {
+            EnqueueMessage("Task_Use_Item_Egg_Incubator_Identifier", "Task_Use_Item_Egg_Incubator_Message", Color.Red,
+                args.Response.Result, args.ItemId, args.PokemonId);
+        }
     }
 }

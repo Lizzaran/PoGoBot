@@ -180,4 +180,10 @@
   <data name="Task_Route_Next_Point_Message" xml:space="preserve">
     <value>({0}) {1} {2}</value>
   </data>
+  <data name="Task_Use_Item_Egg_Incubator_Identifier" xml:space="preserve">
+    <value>Use Egg Incubator</value>
+  </data>
+  <data name="Task_Use_Item_Egg_Incubator_Message" xml:space="preserve">
+    <value>({0}) {1} {2}</value>
+  </data>
 </root>

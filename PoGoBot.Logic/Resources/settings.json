@@ -12,6 +12,9 @@
     "LevelUpRewards": {
       "Enabled": true
     },
+    "EggIncubator": {
+      "Enabled": true
+    },
     "Item": {
       "Recycle": {
         "Enabled": true,
