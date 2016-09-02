@@ -86,7 +86,7 @@ namespace PoGoBot.Logic.Helpers
         public static double RandomizeCoordinate(double coordinate)
         {
             Random rnd = new Random();
-            return coordinate + (rnd.Next(100) - 50.0) / 1000000;
+            return coordinate + (rnd.Next(40) - 20.0) / 1000000;
         }
     }
 }

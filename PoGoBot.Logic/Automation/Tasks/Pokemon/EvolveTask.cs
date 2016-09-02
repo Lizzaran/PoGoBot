@@ -23,7 +23,9 @@ namespace PoGoBot.Logic.Automation.Tasks.Pokemon
                 new FavoriteFilter(Context.Settings, Context.Session,
                     () => Context.Settings.Bot.Pokemon.Evolve.IgnoreFavorites),
                 new EvolveCombatPowerFilter(Context.Settings, Context.Session),
-                new EvolveCandyFilter(Context.Settings, Context.Session)
+                new EvolveCandyFilter(Context.Settings, Context.Session),
+                new EvolveLuckyEggActiveFilter(Context.Settings, Context.Session,
+                    () => Context.Settings.Bot.Pokemon.Evolve.LuckyEggActive)
             });
         }
 

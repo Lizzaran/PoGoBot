@@ -105,6 +105,7 @@ namespace PoGoBot.Logic
             public bool Enabled { get; set; }
             public bool IgnoreFavorites { get; set; }
             public bool PrioritizeLowCandy { get; set; }
+            public bool LuckyEggActive { get; set; }
             public int MinimumCandyNeeded { get; set; }
             public int MaximumCandyNeeded { get; set; }
             public int MinimumCombatPower { get; set; }
@@ -173,6 +174,7 @@ namespace PoGoBot.Logic
         [JsonObject(ItemRequired = Required.Always)]
         public class SettingsRoutePoint
         {
+            public int Id { get; set; }
             public GeoCoordinate Position { get; set; }
             public List<int> RouteLinks { get; set; }
         }

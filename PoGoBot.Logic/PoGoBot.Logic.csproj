@@ -106,6 +106,7 @@
     <Compile Include="Automation\Filters\Pokemon\EncounterMapIsValidFilter.cs" />
     <Compile Include="Automation\Filters\Pokemon\EvolveCandyFilter.cs" />
     <Compile Include="Automation\Filters\Pokemon\EvolveCombatPowerFilter.cs" />
+    <Compile Include="Automation\Filters\Pokemon\EvolveLuckyEggActiveFilter.cs" />
     <Compile Include="Automation\Filters\Pokemon\FavoriteFilter.cs" />
     <Compile Include="Automation\Filters\Pokemon\ReleaseMaxIndividualValuesFilter.cs" />
     <Compile Include="Automation\Filters\Pokemon\ReleasePriorityTypeFilter.cs" />

@@ -95,6 +95,7 @@
         "Enabled": true,
         "IgnoreFavorites": false,
         "PrioritizeLowCandy": true,
+        "LuckyEggActive": true,
         "MinimumCandyNeeded": 0,
         "MaximumCandyNeeded": 999,
         "MinimumCombatPower": 0,
@@ -164,6 +165,7 @@
       "Speed": 5,
       "RoutePoints": [
         {
+          "Id" : 0,
           "Position": {
             "Latitude": 48.890684, 
             "Longitude": 2.240364
@@ -173,6 +175,7 @@
           ]
         },
         {
+          "Id" : 1,
           "Position": {
             "Latitude": 48.891947, 
             "Longitude": 2.236314
@@ -183,6 +186,7 @@
           ]
         },
         {
+          "Id" : 2,
           "Position": {
             "Latitude": 48.892430, 
             "Longitude": 2.236765
