@@ -266,5 +266,23 @@ namespace PoGoBot.Console.Resources.Languages.Logic {
                 return ResourceManager.GetString("Task_Use_Item_Egg_Incubator_Message", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use Lucky Egg.
+        /// </summary>
+        internal static string Task_Use_Lucky_Egg_Identifier {
+            get {
+                return ResourceManager.GetString("Task_Use_Lucky_Egg_Identifier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}.
+        /// </summary>
+        internal static string Task_Use_Lucky_Egg_Message {
+            get {
+                return ResourceManager.GetString("Task_Use_Lucky_Egg_Message", resourceCulture);
+            }
+        }
     }
 }

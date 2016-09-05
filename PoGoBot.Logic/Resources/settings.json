@@ -196,6 +196,10 @@
           ]
         }
       ]
+    },
+    "UseLuckyEgg": {
+      "Enabled": true,
+      "PercentStorageFull": 100
     }
   }
 }

@@ -30,6 +30,7 @@ namespace PoGoBot.Logic
             public SettingPokemon Pokemon { get; set; }
             public SettingPokeStop PokeStop { get; set; }
             public SettingsFollowRoute FollowRoute { get; set; }
+            public SettingsUseLuckyEgg UseLuckyEgg { get; set; }
         }
 
         [JsonObject(ItemRequired = Required.Always)]
@@ -177,6 +178,13 @@ namespace PoGoBot.Logic
             public int Id { get; set; }
             public GeoCoordinate Position { get; set; }
             public List<int> RouteLinks { get; set; }
+        }
+
+        [JsonObject(ItemRequired = Required.Always)]
+        public class SettingsUseLuckyEgg
+        {
+            public bool Enabled { get; set; }
+            public int PercentStorageFull { get; set; }
         }
     }
 }

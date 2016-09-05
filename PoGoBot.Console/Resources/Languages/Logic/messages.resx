@@ -186,4 +186,10 @@
   <data name="Task_Use_Item_Egg_Incubator_Message" xml:space="preserve">
     <value>({0}) {1} {2}</value>
   </data>
+  <data name="Task_Use_Lucky_Egg_Identifier" xml:space="preserve">
+    <value>Use Lucky Egg</value>
+  </data>
+  <data name="Task_Use_Lucky_Egg_Message" xml:space="preserve">
+    <value>{0}</value>
+  </data>
 </root>

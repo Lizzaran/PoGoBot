@@ -88,6 +88,7 @@
     <Compile Include="Automation\Events\Tasks\Player\SoftbanDetectedEventArgs.cs" />
     <Compile Include="Automation\Events\Tasks\Player\SoftbanLiftedEventArgs.cs" />
     <Compile Include="Automation\Events\Tasks\Player\StardustEventArgs.cs" />
+    <Compile Include="Automation\Events\Tasks\Player\UseLuckyEggEventArgs.cs" />
     <Compile Include="Automation\Events\Tasks\Pokemon\CatchEventArgs.cs" />
     <Compile Include="Automation\Events\Tasks\Pokemon\EncounterEventArgs.cs" />
     <Compile Include="Automation\Events\Tasks\Pokemon\EvolveEventArgs.cs" />
@@ -120,6 +121,7 @@
     <Compile Include="Automation\Tasks\Player\FollowRouteTask.cs" />
     <Compile Include="Automation\Tasks\Player\LevelUpRewardsTask.cs" />
     <Compile Include="Automation\Tasks\Player\SoftbanTask.cs" />
+    <Compile Include="Automation\Tasks\Player\UseLuckyEggTask.cs" />
     <Compile Include="Automation\Tasks\Pokemon\CatchTask.cs" />
     <Compile Include="Automation\Tasks\Pokemon\BaseEncounterTask.cs" />
     <Compile Include="Automation\Tasks\Pokemon\Encounter\IncenseTask.cs" />

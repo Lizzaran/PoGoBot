@@ -1,5 +1,6 @@
 ﻿using Google.Protobuf;
 using POGOLib.Net;
+using POGOProtos.Inventory.Item;
 using POGOProtos.Networking.Requests;
 using POGOProtos.Networking.Requests.Messages;
 using POGOProtos.Networking.Responses;
@@ -60,6 +61,24 @@ namespace PoGoBot.Logic.Api.Categories
             if (parsed.Result != LevelUpRewardsResponse.Types.Result.Success)
             {
                 Log.Error($"LevelUpRewards Success: {parsed.Result}");
+            }
+            return parsed;
+        }
+
+        public UseItemXpBoostResponse UseLuckyEgg()
+        {
+            var response = Session.RpcClient.SendRemoteProcedureCall(new Request
+            {
+                RequestType = RequestType.UseItemXpBoost,
+                RequestMessage = new UseItemXpBoostMessage
+                {
+                    ItemId = ItemId.ItemLuckyEgg
+                }.ToByteString()
+            });
+            var parsed = UseItemXpBoostResponse.Parser.ParseFrom(response);
+            if (parsed.Result != UseItemXpBoostResponse.Types.Result.Success)
+            {
+                Log.Error($"UseItemXpBoost Success: {parsed.Result}");
             }
             return parsed;
         }

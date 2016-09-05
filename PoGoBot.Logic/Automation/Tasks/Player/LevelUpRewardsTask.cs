@@ -20,9 +20,9 @@ namespace PoGoBot.Logic.Automation.Tasks.Player
 
         public override void OnExecute()
         {
-            if (CurrentLevel < Context.Session.Player.Stats.Level)
+            while (CurrentLevel < Context.Session.Player.Stats.Level)
             {
-                CurrentLevel = Context.Session.Player.Stats.Level;
+                CurrentLevel ++;
 
                 var levelUpRewardsResponse = Context.RpcRequest.Player.LevelUpRewards(CurrentLevel);
                 Context.Events.DispatchEvent(this, new LevelUpRewardsEventArgs(levelUpRewardsResponse, CurrentLevel));
