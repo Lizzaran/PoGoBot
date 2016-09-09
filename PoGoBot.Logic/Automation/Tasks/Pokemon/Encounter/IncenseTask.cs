@@ -38,7 +38,7 @@ namespace PoGoBot.Logic.Automation.Tasks.Pokemon.Encounter
             var result = GetEncounterResult(encounterResponse.Result);
             Context.Events.DispatchEventAsync(this,
                 new EncounterEventArgs(result, EEncounterType.Incense, encounterResponse.PokemonData, captureProbability,
-                    incenseResponse.EncounterId, incenseResponse.EncounterLocation));
+                    incenseResponse.EncounterId, incenseResponse.EncounterLocation, incenseResponse.Latitude, incenseResponse.Longitude));
             BlacklistedPokemons.Add(incenseResponse.EncounterId);
         }
 

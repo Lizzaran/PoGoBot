@@ -61,6 +61,24 @@ namespace PoGoBot.Console.Resources.Languages.Logic {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Encounter.
+        /// </summary>
+        internal static string Task_Encounter_Identifier {
+            get {
+                return ResourceManager.GetString("Task_Encounter_Identifier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} | {1} | {2} | {3}.
+        /// </summary>
+        internal static string Task_Encounter_Message {
+            get {
+                return ResourceManager.GetString("Task_Encounter_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PokeStop.
         /// </summary>
         internal static string Task_Fort_PokeStop_Identifier {
@@ -187,7 +205,7 @@ namespace PoGoBot.Console.Resources.Languages.Logic {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} | {1} | CP {2} | Chance: {3}%.
+        ///   Looks up a localized string similar to {0} | {1} | CP {2} | XP {3} | IA {4} | ID {5} | IS {6} | Chance: {7}%.
         /// </summary>
         internal static string Task_Pokemon_Catch_Message {
             get {
@@ -223,7 +241,7 @@ namespace PoGoBot.Console.Resources.Languages.Logic {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} (CP {1}) (XP {2}) (IA {3}) (ID {4}) (IS {5}).
+        ///   Looks up a localized string similar to {0} | CP {1} | XP {2} | IA {3} | ID {4} | IS {5}.
         /// </summary>
         internal static string Task_Pokemon_Release_Message {
             get {

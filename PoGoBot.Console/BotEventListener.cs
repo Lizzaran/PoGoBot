@@ -140,7 +140,8 @@ namespace PoGoBot.Console
         private void HandleEvent(CatchEventArgs args)
         {
             EnqueueMessage("Task_Pokemon_Catch_Identifier", "Task_Pokemon_Catch_Message", Color.ForestGreen,
-                args.Response.Status, args.Pokemon.PokemonId.ToString(), args.Pokemon.Cp,
+                args.Response.Status, args.Pokemon.PokemonId.ToString(), args.Pokemon.Cp, args.Pokemon.StaminaMax, 
+                args.Pokemon.IndividualAttack, args.Pokemon.IndividualDefense, args.Pokemon.IndividualStamina,
                 args.CaptureProbability.ToString("0"));
         }
 
@@ -179,6 +180,12 @@ namespace PoGoBot.Console
         {
             EnqueueMessage("Task_Use_Lucky_Egg_Identifier", "Task_Use_Lucky_Egg_Message", Color.Red,
                 args.Response.Result);
+        }
+
+        private void HandleEvent(EncounterEventArgs args)
+        {
+            EnqueueMessage("Task_Encounter_Identifier", "Task_Encounter_Message", Color.Red, 
+                args.Result, args.Pokemon.PokemonId, args.Latitude, args.Longitude);
         }
     }
 }
