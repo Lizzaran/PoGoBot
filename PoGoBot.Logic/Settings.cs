@@ -4,6 +4,8 @@ using Newtonsoft.Json.Converters;
 using PoGoBot.Logic.Helpers;
 using POGOProtos.Enums;
 using POGOProtos.Inventory.Item;
+using PoGoBot.Logic.Enumerations;
+using GeoCoordinatePortable;
 
 namespace PoGoBot.Logic
 {
@@ -22,9 +24,13 @@ namespace PoGoBot.Logic
         {
             public int IntervalMilliseconds { get; set; }
             public SettingsSoftban Softban { get; set; }
+            public SettingsEggIncubator EggIncubator { get; set; }
+            public SettingsLevelUpRewards LevelUpRewards { get; set; }
             public SettingItem Item { get; set; }
             public SettingPokemon Pokemon { get; set; }
             public SettingPokeStop PokeStop { get; set; }
+            public SettingsFollowRoute FollowRoute { get; set; }
+            public SettingsUseLuckyEgg UseLuckyEgg { get; set; }
         }
 
         [JsonObject(ItemRequired = Required.Always)]
@@ -35,6 +41,15 @@ namespace PoGoBot.Logic
             public SettingsSoftbanTrigger Trigger { get; set; }
         }
 
+        public class SettingsEggIncubator
+        {
+            public bool Enabled { get; set; }
+        }
+
+        public class SettingsLevelUpRewards
+        {
+            public bool Enabled { get; set; }
+        }
 
         [JsonObject(ItemRequired = Required.Always)]
         public class SettingsSoftbanTrigger
@@ -59,7 +74,7 @@ namespace PoGoBot.Logic
         [JsonObject(ItemRequired = Required.Always)]
         public class SettingRecycleItem
         {
-            [JsonConverter(typeof (StringEnumConverter))]
+            [JsonConverter(typeof(StringEnumConverter))]
             public ItemId ItemId { get; set; }
 
             public int MaximumAmount { get; set; }
@@ -79,9 +94,10 @@ namespace PoGoBot.Logic
             public bool Enabled { get; set; }
             public bool IsEvolveAware { get; set; }
             public bool IgnoreFavorites { get; set; }
-            public bool PrioritizeLowCombatPower { get; set; }
+            [JsonConverter(typeof(StringEnumConverter))]
+            public EPriorityType PriorityType { get; set; }
             public int KeepUniqueAmount { get; set; }
-            public int MaximumCombatPower { get; set; }
+            public int MaximumIndividualValues { get; set; }
         }
 
         [JsonObject(ItemRequired = Required.Always)]
@@ -90,6 +106,9 @@ namespace PoGoBot.Logic
             public bool Enabled { get; set; }
             public bool IgnoreFavorites { get; set; }
             public bool PrioritizeLowCandy { get; set; }
+            [JsonConverter(typeof(StringEnumConverter))]
+            public EPriorityType PriorityType { get; set; }
+            public bool LuckyEggActive { get; set; }
             public int MinimumCandyNeeded { get; set; }
             public int MaximumCandyNeeded { get; set; }
             public int MinimumCombatPower { get; set; }
@@ -117,7 +136,7 @@ namespace PoGoBot.Logic
         [JsonObject(ItemRequired = Required.Always)]
         public class SettingCatchBerry
         {
-            [JsonConverter(typeof (StringEnumConverter))]
+            [JsonConverter(typeof(StringEnumConverter))]
             public ItemId ItemId { get; set; }
 
             public double MaximumCaptureProbability { get; set; }
@@ -126,7 +145,7 @@ namespace PoGoBot.Logic
         [JsonObject(ItemRequired = Required.Always)]
         public class SettingCatchBall
         {
-            [JsonConverter(typeof (StringEnumConverter))]
+            [JsonConverter(typeof(StringEnumConverter))]
             public ItemId ItemId { get; set; }
 
             public int MinimumCombatPower { get; set; }
@@ -135,7 +154,7 @@ namespace PoGoBot.Logic
         [JsonObject(ItemRequired = Required.Always)]
         public class SettingCatchIgnore
         {
-            [JsonConverter(typeof (StringEnumConverter))]
+            [JsonConverter(typeof(StringEnumConverter))]
             public PokemonId PokemonId { get; set; }
         }
 
@@ -144,6 +163,30 @@ namespace PoGoBot.Logic
         {
             public bool Enabled { get; set; }
             public long CooldownSeconds { get; set; }
+        }
+
+        [JsonObject(ItemRequired = Required.Always)]
+        public class SettingsFollowRoute
+        {
+            public bool Enabled { get; set; }
+            public int StepSize { get; set; }
+            public int Speed { get; set; }
+            public List<SettingsRoutePoint> RoutePoints { get; set; }
+        }
+
+        [JsonObject(ItemRequired = Required.Always)]
+        public class SettingsRoutePoint
+        {
+            public int Id { get; set; }
+            public GeoCoordinate Position { get; set; }
+            public List<int> RouteLinks { get; set; }
+        }
+
+        [JsonObject(ItemRequired = Required.Always)]
+        public class SettingsUseLuckyEgg
+        {
+            public bool Enabled { get; set; }
+            public int PercentStorageFull { get; set; }
         }
     }
 }

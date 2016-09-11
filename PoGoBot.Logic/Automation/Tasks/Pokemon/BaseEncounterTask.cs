@@ -13,19 +13,17 @@ namespace PoGoBot.Logic.Automation.Tasks.Pokemon
         }
 
         protected List<ulong> BlacklistedPokemons { get; } = new List<ulong>();
-        protected int MaxPokemonStorage { get; private set; }
         public override bool Enabled => Context.Settings.Bot.Pokemon.Catch.Enabled;
 
         public override bool ShouldExecute
             =>
-                base.ShouldExecute && Context.Session.Player.Inventory.GetPokemons().Count < MaxPokemonStorage &&
+                base.ShouldExecute && (Context.Session.Player.Inventory.GetPokemons().Count + Context.Session.Player.Inventory.GetEggs().Count) < Context.Session.Player.Data?.MaxPokemonStorage &&
                 Context.Session.Player.Inventory.GetAmountOfItems(
                     Context.Settings.Bot.Pokemon.Catch.Balls.Select(b => b.ItemId)) >=
                 Context.Settings.Bot.Pokemon.Catch.MinimumBalls;
 
         public override void OnStart()
         {
-            MaxPokemonStorage = (Context.Session.Player.Data?.MaxPokemonStorage ?? 250) - 10;
             Context.Session.Map.Update += OnMapUpdate;
             Context.Events.EventReceived += OnEventReceived;
         }

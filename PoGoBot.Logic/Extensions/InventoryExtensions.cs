@@ -38,6 +38,14 @@ namespace PoGoBot.Logic.Extensions
                     .ToList() ?? new List<PokemonData>();
         }
 
+        public static List<PokemonData> GetEggs(this Inventory inventory)
+        {
+            return
+                inventory?.InventoryItems?.Select(it => it?.InventoryItemData?.PokemonData)
+                    .Where(p => p != null && p.Id > 0 && p.IsEgg)
+                    .ToList() ?? new List<PokemonData>();
+        }
+
         public static List<Candy> GetCandies(this Inventory inventory)
         {
             return

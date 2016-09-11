@@ -35,8 +35,12 @@ namespace PoGoBot.Logic.Automation.Filters.Pokemon
             {
                 var pokemonTemplate = _pokemonTemplates.Single(p => p.PokemonId == pokemonId.Key);
                 var familyCandy = candies.Single(p => pokemonTemplate.FamilyId == p.FamilyId);
-                var amountToSkip = (familyCandy.Candy_ + pokemonTemplate.CandyToEvolve - 1)/
-                                   pokemonTemplate.CandyToEvolve;
+                int amountToSkip = 0;
+                if ((pokemonTemplate.CandyToEvolve > 0) && (pokemonTemplate.ParentPokemonId == PokemonId.Missingno))
+                {
+                    amountToSkip = Math.Max(0, (familyCandy.Candy_ + pokemonTemplate.CandyToEvolve - 1) /
+                        pokemonTemplate.CandyToEvolve - Settings.Bot.Pokemon.Release.KeepUniqueAmount);
+                }
                 releasePokemons.AddRange(pokemons.Where(p => p.PokemonId == pokemonId.Key).Skip(amountToSkip).ToList());
             }
             return releasePokemons;

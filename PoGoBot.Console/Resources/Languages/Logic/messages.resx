@@ -154,12 +154,48 @@
     <value>Transfer</value>
   </data>
   <data name="Task_Pokemon_Release_Message" xml:space="preserve">
-    <value>{0} (CP {1})</value>
+    <value>{0} | CP {1} | XP {2} | IA {3} | ID {4} | IS {5}</value>
   </data>
   <data name="Task_Pokemon_Catch_Identifier" xml:space="preserve">
     <value>Pokemon</value>
   </data>
   <data name="Task_Pokemon_Catch_Message" xml:space="preserve">
-    <value>{0} | {1} | CP {2} | Chance: {3}%</value>
+    <value>{0} | {1} | CP {2} | XP {3} | IA {4} | ID {5} | IS {6} | Chance: {7}%</value>
+  </data>
+  <data name="Task_Player_LevelUpRewards_Identifier" xml:space="preserve">
+    <value>LevelUp Rewards</value>
+  </data>
+  <data name="Task_Player_LevelUpRewards_Message_Detected" xml:space="preserve">
+    <value>Level {0} | {1}</value>
+  </data>
+  <data name="Task_Player_Update_Identifier" xml:space="preserve">
+    <value>Player Update</value>
+  </data>
+  <data name="Task_Player_Update_Message" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="Task_Route_Next_Point_Identifier" xml:space="preserve">
+    <value>Route Next Point</value>
+  </data>
+  <data name="Task_Route_Next_Point_Message" xml:space="preserve">
+    <value>({0}) {1} {2}</value>
+  </data>
+  <data name="Task_Use_Item_Egg_Incubator_Identifier" xml:space="preserve">
+    <value>Use Egg Incubator</value>
+  </data>
+  <data name="Task_Use_Item_Egg_Incubator_Message" xml:space="preserve">
+    <value>({0}) {1} {2}</value>
+  </data>
+  <data name="Task_Use_Lucky_Egg_Identifier" xml:space="preserve">
+    <value>Use Lucky Egg</value>
+  </data>
+  <data name="Task_Use_Lucky_Egg_Message" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="Task_Encounter_Identifier" xml:space="preserve">
+    <value>Encounter</value>
+  </data>
+  <data name="Task_Encounter_Message" xml:space="preserve">
+    <value>{0} | {1} | {2} | {3}</value>
   </data>
 </root>

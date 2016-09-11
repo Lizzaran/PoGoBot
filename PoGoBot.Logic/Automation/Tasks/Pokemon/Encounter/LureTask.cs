@@ -40,7 +40,7 @@ namespace PoGoBot.Logic.Automation.Tasks.Pokemon.Encounter
             var result = GetEncounterResult(encounterResponse.Result);
             Context.Events.DispatchEventAsync(this,
                 new EncounterEventArgs(result, EEncounterType.Lure, encounterResponse.PokemonData, captureProbability,
-                    fort.LureInfo.EncounterId, fort.LureInfo.FortId));
+                    fort.LureInfo.EncounterId, fort.LureInfo.FortId, fort.Latitude, fort.Longitude));
             BlacklistedPokemons.Add(fort.LureInfo.EncounterId);
         }
 

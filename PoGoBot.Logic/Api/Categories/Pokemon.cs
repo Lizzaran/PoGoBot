@@ -66,7 +66,7 @@ namespace PoGoBot.Logic.Api.Categories
             return parsed;
         }
 
-        public IncenseEncounterResponse EncounterIncense(long encounterId, string encounterLocation)
+        public IncenseEncounterResponse EncounterIncense(ulong encounterId, string encounterLocation)
         {
             var response = Session.RpcClient.SendRemoteProcedureCall(new Request
             {

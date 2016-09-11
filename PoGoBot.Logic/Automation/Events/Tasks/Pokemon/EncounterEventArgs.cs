@@ -7,7 +7,7 @@ namespace PoGoBot.Logic.Automation.Events.Tasks.Pokemon
     public class EncounterEventArgs : EventArgs
     {
         public EncounterEventArgs(EEncounterResult result, EEncounterType type, PokemonData pokemon,
-            double captureProbability, ulong encounterId, string spawnPointId)
+            double captureProbability, ulong encounterId, string spawnPointId, double latitude, double longitude)
         {
             Result = result;
             Type = type;
@@ -15,6 +15,8 @@ namespace PoGoBot.Logic.Automation.Events.Tasks.Pokemon
             CaptureProbability = captureProbability;
             EncounterId = encounterId;
             SpawnPointId = spawnPointId;
+            Latitude = latitude;
+            Longitude = longitude;
         }
 
         public EEncounterResult Result { get; }
@@ -23,5 +25,7 @@ namespace PoGoBot.Logic.Automation.Events.Tasks.Pokemon
         public double CaptureProbability { get; }
         public ulong EncounterId { get; }
         public string SpawnPointId { get; }
+        public double Latitude { get; }
+        public double Longitude { get; }
     }
 }

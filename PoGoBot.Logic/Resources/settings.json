@@ -8,7 +8,13 @@
         "PokemonFleeAmount": 10,
         "PokeStopAmount": 3
       }
-    },    
+    },
+    "LevelUpRewards": {
+      "Enabled": true
+    },
+    "EggIncubator": {
+      "Enabled": true
+    },
     "Item": {
       "Recycle": {
         "Enabled": true,
@@ -81,14 +87,16 @@
         "Enabled": true,
         "IsEvolveAware": true,
         "IgnoreFavorites": true,
-        "PrioritizeLowCombatPower": true,
-        "KeepUniqueAmount": 1,
-        "MaximumCombatPower": 500
+        "PriorityType": "LowIndividualValues",
+        "KeepUniqueAmount": 6,
+        "MaximumIndividualValues": 40
       },
       "Evolve": {
         "Enabled": true,
         "IgnoreFavorites": false,
         "PrioritizeLowCandy": true,
+        "PriorityType": "LowIndividualValues",
+        "LuckyEggActive": true,
         "MinimumCandyNeeded": 0,
         "MaximumCandyNeeded": 999,
         "MinimumCombatPower": 0,
@@ -150,7 +158,49 @@
     },
     "PokeStop": {
       "Enabled": true,
-      "CooldownSeconds":  300.0
+      "CooldownSeconds": 300.0
+    },
+    "FollowRoute": {
+      "Enabled": true,
+      "StepSize": 5,
+      "Speed": 5,
+      "RoutePoints": [
+        {
+          "Id" : 0,
+          "Position": {
+            "Latitude": 48.890684, 
+            "Longitude": 2.240364
+          },
+          "RouteLinks": [
+            1
+          ]
+        },
+        {
+          "Id" : 1,
+          "Position": {
+            "Latitude": 48.891947, 
+            "Longitude": 2.236314
+          },
+          "RouteLinks": [
+            0,
+            2
+          ]
+        },
+        {
+          "Id" : 2,
+          "Position": {
+            "Latitude": 48.892430, 
+            "Longitude": 2.236765
+          },
+          "RouteLinks": [
+            1
+          ]
+        }
+      ]
+    },
+    "UseLuckyEgg": {
+      "Enabled": true,
+      "PercentStorageFull": 100
     }
   }
 }

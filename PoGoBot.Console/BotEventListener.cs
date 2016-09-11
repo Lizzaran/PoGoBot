@@ -133,14 +133,59 @@ namespace PoGoBot.Console
                 return;
             }
             EnqueueMessage("Task_Pokemon_Release_Identifier", "Task_Pokemon_Release_Message", Color.PaleVioletRed,
-                args.Pokemon.PokemonId.ToString(), args.Pokemon.Cp);
+                args.Pokemon.PokemonId.ToString(), args.Pokemon.Cp, args.Pokemon.Stamina, 
+                args.Pokemon.IndividualAttack, args.Pokemon.IndividualDefense, args.Pokemon.IndividualStamina);
         }
 
         private void HandleEvent(CatchEventArgs args)
         {
             EnqueueMessage("Task_Pokemon_Catch_Identifier", "Task_Pokemon_Catch_Message", Color.ForestGreen,
-                args.Response.Status, args.Pokemon.PokemonId.ToString(), args.Pokemon.Cp,
+                args.Response.Status, args.Pokemon.PokemonId.ToString(), args.Pokemon.Cp, args.Pokemon.StaminaMax, 
+                args.Pokemon.IndividualAttack, args.Pokemon.IndividualDefense, args.Pokemon.IndividualStamina,
                 args.CaptureProbability.ToString("0"));
+        }
+
+        private void HandleEvent(LevelUpRewardsEventArgs args)
+        {
+            var items = string.Empty;
+            if (args.Response.ItemsAwarded.Any())
+            {
+                var dictionary = args.Response.ItemsAwarded.GroupBy(i => i.ItemId)
+                    .ToDictionary(k => k.Key, v => v.Sum(x => x.ItemCount));
+                items = string.Join(", ", dictionary.Select(kv => kv.Value + " x " + kv.Key).ToArray());
+            }
+            EnqueueMessage("Task_Player_LevelUpRewards_Identifier", "Task_Player_LevelUpRewards_Message_Detected", Color.White,
+                args.Level, items);
+        }
+
+        private void HandleEvent(PlayerUpdateEventArgs args)
+        {
+            EnqueueMessage("Task_Player_Update_Identifier", "Task_Player_Update_Message", Color.White,
+                args.Latitude, args.Longitude);
+        }
+
+        private void HandleEvent(RouteNextPointEventArgs args)
+        {
+            EnqueueMessage("Task_Route_Next_Point_Identifier", "Task_Route_Next_Point_Message", Color.Red,
+                args.NextPoint, args.Latitude, args.Longitude);
+        }
+
+        private void HandleEvent(UseItemEggIncubatorArgs args)
+        {
+            EnqueueMessage("Task_Use_Item_Egg_Incubator_Identifier", "Task_Use_Item_Egg_Incubator_Message", Color.Red,
+                args.Response.Result, args.ItemId, args.PokemonId);
+        }
+
+        private void HandleEvent(UseLuckyEggEventArgs args)
+        {
+            EnqueueMessage("Task_Use_Lucky_Egg_Identifier", "Task_Use_Lucky_Egg_Message", Color.Red,
+                args.Response.Result);
+        }
+
+        private void HandleEvent(EncounterEventArgs args)
+        {
+            EnqueueMessage("Task_Encounter_Identifier", "Task_Encounter_Message", Color.Red, 
+                args.Result, args.Pokemon.PokemonId, args.Latitude, args.Longitude);
         }
     }
 }

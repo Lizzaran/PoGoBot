@@ -19,14 +19,16 @@ namespace PoGoBot.Logic.Automation.Tasks.Pokemon
             _pipeline = new Pipeline<IEnumerable<PokemonData>>();
             _pipeline.Register(new List<IFilter<IEnumerable<PokemonData>>>
             {
-                new ReleaseUniqueFilter(Context.Settings, Context.Session,
-                    () => Context.Settings.Bot.Pokemon.Release.KeepUniqueAmount > 0),
-                new ReleaseCombatPowerFilter(Context.Settings, Context.Session),
                 new DeployedFilter(Context.Settings, Context.Session),
                 new FavoriteFilter(Context.Settings, Context.Session,
                     () => Context.Settings.Bot.Pokemon.Release.IgnoreFavorites),
+                new ReleasePriorityTypeFilter(Context.Settings, Context.Session),
+                new ReleaseUniqueFilter(Context.Settings, Context.Session,
+                    () => Context.Settings.Bot.Pokemon.Release.KeepUniqueAmount > 0),
                 new ReleaseEvolveAwareFilter(Context.Settings, Context.Session,
-                    () => Context.Settings.Bot.Pokemon.Release.IsEvolveAware)
+                    () => Context.Settings.Bot.Pokemon.Release.IsEvolveAware),
+                new ReleaseMaxIndividualValuesFilter(Context.Settings, Context.Session,
+                    () => Context.Settings.Bot.Pokemon.Release.MaximumIndividualValues > 0)
             });
         }
 
