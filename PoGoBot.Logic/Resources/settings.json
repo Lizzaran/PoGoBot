@@ -95,6 +95,7 @@
         "Enabled": true,
         "IgnoreFavorites": false,
         "PrioritizeLowCandy": true,
+        "PriorityType": "LowIndividualValues",
         "LuckyEggActive": true,
         "MinimumCandyNeeded": 0,
         "MaximumCandyNeeded": 999,

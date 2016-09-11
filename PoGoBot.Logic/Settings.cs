@@ -95,7 +95,7 @@ namespace PoGoBot.Logic
             public bool IsEvolveAware { get; set; }
             public bool IgnoreFavorites { get; set; }
             [JsonConverter(typeof(StringEnumConverter))]
-            public EReleasePriorityType PriorityType { get; set; }
+            public EPriorityType PriorityType { get; set; }
             public int KeepUniqueAmount { get; set; }
             public int MaximumIndividualValues { get; set; }
         }
@@ -106,6 +106,8 @@ namespace PoGoBot.Logic
             public bool Enabled { get; set; }
             public bool IgnoreFavorites { get; set; }
             public bool PrioritizeLowCandy { get; set; }
+            [JsonConverter(typeof(StringEnumConverter))]
+            public EPriorityType PriorityType { get; set; }
             public bool LuckyEggActive { get; set; }
             public int MinimumCandyNeeded { get; set; }
             public int MaximumCandyNeeded { get; set; }

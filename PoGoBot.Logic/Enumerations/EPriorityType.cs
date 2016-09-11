@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PoGoBot.Logic.Enumerations
 {
-    public enum EReleasePriorityType
+    public enum EPriorityType
     {
         LowCombatPower,
         LowIndividualValues,
